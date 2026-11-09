@@ -1,0 +1,47 @@
+let projects = [];
+
+function addProject() {
+  const titleInput = document.getElementById('title');
+  const descInput = document.getElementById('desc');
+
+  const title = titleInput.value.trim();
+  const desc = descInput.value.trim();
+
+  if (!title) {
+    alert('Por favor, introduz o nome do projeto.');
+    return;
+  }
+
+  const newProject = {
+    id: Date.now(),
+    title: title,
+    description: desc || 'Sem descrição.'
+  };
+
+  projects.push(newProject);
+  renderProjects();
+
+  // Limpar campos
+  titleInput.value = '';
+  descInput.value = '';
+}
+
+function renderProjects() {
+  const listContainer = document.getElementById('projectList');
+
+  if (projects.length === 0) {
+    listContainer.innerHTML = '<p style="color: #6a737d;">Nenhum projeto registado ainda.</p>';
+    return;
+  }
+
+  listContainer.innerHTML = '';
+  projects.forEach(project => {
+    const item = document.createElement('div');
+    item.className = 'project-item';
+    item.innerHTML = `
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+    `;
+    listContainer.appendChild(item);
+  });
+}
