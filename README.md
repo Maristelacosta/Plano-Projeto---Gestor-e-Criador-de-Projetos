@@ -1,4 +1,4 @@
-# 🚀 Plano de Projeto - Gestor e Criador de Projetos
+# 🚀  Gestor e Criador de Projetos
 
 Um sistema intuitivo e eficiente desenvolvido para ajudar na organização, planeamento e criação de novos projetos, permitindo gerir tarefas e acompanhar o progresso de forma simples.
 
