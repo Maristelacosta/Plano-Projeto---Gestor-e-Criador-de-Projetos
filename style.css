@@ -1,0 +1,319 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+/* ==========================
+   TÍTULOS
+========================== */
+
+h1 {
+    text-align: center;
+    color: #0366d6;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #24292f;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   FORMULÁRIO
+========================== */
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    transition: 0.3s;
+    background: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #0366d6;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.15);
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* botão principal */
+
+.btn-primary,
+button {
+    background: #2ea44f;
+    color: white;
+}
+
+.btn-primary:hover,
+button:hover {
+    background: #278a43;
+}
+
+/* botão excluir */
+
+.btn-delete {
+    background: #d73a49;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    background: #b62331;
+}
+
+/* botão editar */
+
+.btn-edit {
+    background: #0366d6;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-edit:hover {
+    background: #0256b8;
+}
+
+/* ==========================
+   LISTA DE PROJETOS
+========================== */
+
+#projectList {
+    margin-top: 10px;
+}
+
+.project-item {
+    background: #fdfdfd;
+    border-left: 6px solid #0366d6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.project-item:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-item h3 {
+    color: #0366d6;
+    margin-bottom: 8px;
+}
+
+.project-item p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   PRIORIDADES
+========================== */
+
+.priority-high {
+    border-left-color: #d73a49;
+}
+
+.priority-medium {
+    border-left-color: #f39c12;
+}
+
+.priority-low {
+    border-left-color: #2ea44f;
+}
+
+/* ==========================
+   STATUS
+========================== */
+
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #e3fcef;
+    color: #22863a;
+}
+
+.status-pending {
+    background: #fff5b1;
+    color: #735c0f;
+}
+
+.status-completed {
+    background: #ddeeff;
+    color: #0366d6;
+}
+
+/* ==========================
+   CONTADOR
+========================== */
+
+.counter {
+    text-align: center;
+    font-weight: bold;
+    color: #0366d6;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   PESQUISA
+========================== */
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eaeaea;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-item {
+    animation: fadeIn 0.4s ease;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 0.9rem;
+    }
+}
